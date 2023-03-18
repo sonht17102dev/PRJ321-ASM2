@@ -1,0 +1,397 @@
+
+* {
+  box-sizing: border-box;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  height: 200px;
+  text-align: center;
+  background-color: #222F3C;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  float: left;
+  width: 100%;
+}
+
+.header h1 {
+  font-size: 50px;
+  color: white;
+}
+.header h2 {
+  color: #1BA4D6;
+}
+
+/* Style the top navigation bar */
+body .topnav {
+  background-color: #293847 ;
+  color: black;
+  height: 250px;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2 ;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  height: 50px;
+  background-color: #293847 ;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #293847;
+  color: orange;
+}
+
+.left-header {
+  float: left;
+  width: 25%;
+}
+.right-header{
+  float: inherit;
+  width: 75%;
+  height: 51px;
+  position: relative;
+  left: 10px;
+  top: 50px;
+}
+.search-bar {
+  width: 700px;
+  height: 51px;
+  font-size: large;
+  font-weight: bold;
+}
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #222F3C;
+  min-width: 200px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {color: orange;}
+
+.show {display: block;}
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+
+.leftcolumn {   
+  float: left;
+  width: 75%;
+  height: 822.36px;
+  background-color: whitesmoke;
+  margin-top: 30px;
+}
+.product {
+	float: left;
+	width: 30%;
+	height: auto;
+	margin-top: 30px;
+	margin-left: 30px;
+	padding-left: 20px;
+}
+
+.product img {
+	height: 200px;
+}
+.pagination {
+	position: relative;
+	
+	top: 82px;
+	
+	font-weight: bold;
+	font-size: 500;
+}
+
+.pagination ul li {
+	float: left;
+	list-style-type: none;
+}
+
+.pagination a.active {
+	background-color: orange;
+	color: white;
+}
+
+.pagination a:hover:not(.active) {
+	background-color: #ddd;
+}
+
+.pagination a {
+	color: black;
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
+	border: 1px solid #ddd;
+	border-radius: 50%;
+	margin-top: -80px;
+	margin-bottom: 50px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+footer{
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  background: rgb(31, 15, 1);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer .container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* Thiáº¿t Láº­p Pháº§n Giá»i Thiá»u */
+footer .container .noi-dung{
+  margin-right: 30px;
+}
+footer  .container .noi-dung.about{
+  width:33%;
+}
+footer .container .noi-dung.about h2{
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+footer .container .noi-dung.about h2:before{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 220px;
+  height: 2px;
+  background: #f00;
+}
+footer .container .noi-dung.about p{
+  color: #999;
+}
+/*Thiáº¿t Láº­p Cho ThÃ nh Pháº§n Icon Máº¡ng XÃ£ Há»i*/
+.social-icon{
+  margin-top: 20px;
+  display: flex;
+}
+.social-icon li {
+  list-style: none;
+}
+.social-icon li a{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.social-icon li a:hover{
+  background: #f00;
+}
+.social-icon li a .fa{
+  color: #fff;
+  font-size: 20px;
+}
+
+/* Thiáº¿t Láº­p Pháº§n ÄÆ°á»ng Dáº«n */
+.links h2{
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.links h2{
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.links h2::before{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 220px;
+  height: 2px;
+  background: #f00;
+}
+.links{
+ position: relative;
+ width: 25%;
+}
+.links ul li{
+  list-style: none;
+}
+.links ul li a{
+  color: #999;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.links ul li a:hover{
+  color: #fff;
+}
+
+/* Thiáº¿t Láº­p Pháº§n ThÃ´ng Tin LiÃªn Há» */
+.contact h2{
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.contact h2::before{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 220px;
+  height: 2px;
+  background: #f00;
+}
+.map {
+	width: 150px;
+	height: 150px;
+}
+.contact{
+  width: calc(35% - 60px);
+  margin-right: 0 !important;
+}
+.contact .info{
+  position: relative;
+}
+.contact .info li{
+  display: flex;
+  margin-bottom: 16px;
+}
+.contact .info li span:nth-child(1) {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.contact .info li span{
+  color: #999;
+}
+.contact .info li a{
+  color: #999;
+  text-decoration: none;
+}
+
+/* Thiáº¿t Láº­p Pháº§n Email Subscribe */
+.btn {
+  display: inline-block;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  margin-top:16px;
+  transition: all 200ms ease-in;
+  cursor: pointer;
+}
+.btn--primary {
+  background: #222;
+  color: #fff;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+  border-radius: 2px;
+  padding: 8px 24px;
+}
+.btn--primary:hover {
+  background: #f00;
+}
+.btn--primary:active {
+  background: #f00;
+  box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
+}
+.form__field {
+  width: 100%;
+  background: #fff;
+  color: #a3a3a3;
+  font: inherit;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+  border: 0;
+  outline: 0;
+  padding: 8px 4px;
+}
+/* Responseive cho Footer */
+@media  (max-width: 768px){
+  footer{
+      /* padding: 40px; */
+           }
+  footer .container{
+      flex-direction: column;
+  }
+  footer .container .noi-dung{
+      margin-right: 0;
+      margin-bottom: 40px;
+  }
+  footer .container, .noi-dung.about, .links, .contact{
+      width: 100%;
+  }
+}
